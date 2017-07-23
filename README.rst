@@ -13,10 +13,6 @@ vivodict
         :target: https://vivodict.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-.. image:: https://pyup.io/repos/github/somada141/vivodict/shield.svg
-     :target: https://pyup.io/repos/github/somada141/vivodict/
-     :alt: Updates
-
 
 Auto-vivified arbitrarily-nested dictionary (`dict`) classes.
 
@@ -28,13 +24,7 @@ Auto-vivified arbitrarily-nested dictionary (`dict`) classes.
 Features
 --------
 
-* TODO
-
-Credits
----------
-
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
-
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+* Auto-vivified ``VivoDict`` class derived from the standard Python ``dict`` class (no third-party dependencies).
+* Auto-vivification of arbitrarily-nested ``dict`` objects.
+* Convenience methods for ``flatten``, ``replace``, and ``apply`` operations.
 
