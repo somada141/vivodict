@@ -179,7 +179,7 @@ class VivoDict(dict):
         to applying this method.
 
         Example:
-            A simple example of replacement would be:
+            A simple example of function application would be:
 
                 >>> d = {"a": 1, "b": {"c": 2}, "d": {"e": {"f": 3}}}
                 >>> v = VivoDict.vivify(d)
