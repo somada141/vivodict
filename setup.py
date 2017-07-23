@@ -18,7 +18,7 @@ setup_requirements = [
 ]
 
 test_requirements = [
-    'pytest',
+    'pytest>=3.1.3',
 ]
 
 setup(
