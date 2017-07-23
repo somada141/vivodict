@@ -90,7 +90,7 @@ class VivoDict(dict):
                 >>> d = {"a": 1, "b": {"c": 2}, "d": {"e": {"f": 3}}}
                 >>> v = VivoDict.vivify(d)
                 >>> v.flatten()
-                {'a': 1, 'b.c': 2, 'd.e.f': 3}
+                {"a": 1, "b.c": 2, "d.e.f": 3}
 
         Args:
             delimiter(str, optional): The delimiter to be inserted between the
