@@ -90,7 +90,7 @@ class VivoDict(dict):
                 >>> d = {"a": 1, "b": {"c": 2}, "d": {"e": {"f": 3}}}
                 >>> v = VivoDict.vivify(d)
                 >>> v.flatten()
-                {'a': 1, 'b.c': 2, 'd.e.f': 3}
+                {"a": 1, "b.c": 2, "d.e.f": 3}
 
         Args:
             delimiter(str, optional): The delimiter to be inserted between the
@@ -139,6 +139,15 @@ class VivoDict(dict):
         `VivoDict` object's values I'd suggest you use the `copy` package prior
         to applying this method.
 
+        Example:
+            A simple example of replacement would be:
+
+                >>> d = {"a": 1, "b": {"c": 2}, "d": {"e": {"f": 3}}}
+                >>> v = VivoDict.vivify(d)
+                >>> v.replace(replace_with=0)
+                >>> v
+                {"a": 0, "b": {"c": 0}, "d": {"e": {"f": 0}}}
+
         Args:
             replace_with (object): Any object with which 'leaf' nodes will be
                 replaced.
@@ -168,6 +177,15 @@ class VivoDict(dict):
         applied on the original value. Should you want to maintain the original
         `VivoDict` object's values I'd suggest you use the `copy` package prior
         to applying this method.
+
+        Example:
+            A simple example of replacement would be:
+
+                >>> d = {"a": 1, "b": {"c": 2}, "d": {"e": {"f": 3}}}
+                >>> v = VivoDict.vivify(d)
+                >>> v.apply(func=lambda x: x * 2)
+                >>> v
+                {"a": 2, "b": {"c": 4}, "d": {"e": {"f": 6}}}
 
         Args:
             func (function callable): The function to be applied on all 'leaf'

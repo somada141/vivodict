@@ -109,7 +109,7 @@ def test_replace_zeros(ref, ref_replaced_zeros):
 
 
 def test_apply_double(ref, ref_applied_doubled):
-    """Test the `VivoDict.flattened` method with dash-delimiters."""
+    """Test the `VivoDict.apply` method with a `double` function."""
 
     def double(value):
         return value * 2
@@ -117,5 +117,15 @@ def test_apply_double(ref, ref_applied_doubled):
     vivo = VivoDict.vivify(dict_inp=ref)
     # `apply` works in-place
     vivo.apply(func=double)
+
+    assert vivo == ref_applied_doubled
+
+
+def test_apply_double_lambda(ref, ref_applied_doubled):
+    """Test the `VivoDict.apply` method with a lambda."""
+
+    vivo = VivoDict.vivify(dict_inp=ref)
+    # `apply` works in-place
+    vivo.apply(func=lambda x: x * 2)
 
     assert vivo == ref_applied_doubled
