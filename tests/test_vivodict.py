@@ -119,3 +119,13 @@ def test_apply_double(ref, ref_applied_doubled):
     vivo.apply(func=double)
 
     assert vivo == ref_applied_doubled
+
+
+def test_apply_double_lambda(ref, ref_applied_doubled):
+    """Test the `VivoDict.apply` method with a lambda."""
+
+    vivo = VivoDict.vivify(dict_inp=ref)
+    # `apply` works in-place
+    vivo.apply(func=lambda x: x * 2)
+
+    assert vivo == ref_applied_doubled
