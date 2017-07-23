@@ -161,7 +161,7 @@ tree with a given ``value``::
 
 Should you need to maintain an original copy I'd suggest you use the ``copy``
 package and its ``deepcopy`` function (cause Python passes by reference) as
-such:
+such::
 
     >>> import copy
     >>> original = VivoDict.vivify({"a": 1, "b": {"c": 2}, "d": {"e": {"f": 3}}})
