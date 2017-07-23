@@ -23,7 +23,7 @@ test_requirements = [
 
 setup(
     name='vivodict',
-    version='0.2.0',
+    version='0.3.0',
     description="Auto-vivified arbitrarily-nested dictionary (`dict`) classes.",
     long_description=readme + '\n\n' + history,
     author="Adamos Kyriakou",
