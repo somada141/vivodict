@@ -109,7 +109,7 @@ def test_replace_zeros(ref, ref_replaced_zeros):
 
 
 def test_apply_double(ref, ref_applied_doubled):
-    """Test the `VivoDict.flattened` method with dash-delimiters."""
+    """Test the `VivoDict.apply` method with a `double` function."""
 
     def double(value):
         return value * 2
