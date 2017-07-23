@@ -2,6 +2,11 @@
 History
 =======
 
+0.3.0 (2017-07-23)
+------------------
+
+* Cleanup the docos and removed a bunch of the unnecessary stuff.
+
 0.2.0 (2017-07-23)
 ------------------
 
